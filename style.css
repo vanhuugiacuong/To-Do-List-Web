@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #ff5733; /* Màu chính */
+    --secondary-color: #555; /* Màu phụ */
+    --text-color: #fff;      /* Màu chữ */
+    --bg-color: linear-gradient(to right, rgb(21, 19, 19), #800000, rgb(179, 39, 39));        /* Màu nền */
+    --btn-color: #800000;    /* Màu nút */
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: var(--bg-color);
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto 20px;
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    background: #edeef0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 12px;
+    text-decoration: none;
+    padding: 10px ;
+}
+
+button{
+    padding: 15px 50px;
+    border: none;
+    outline: none;
+    background: var(--btn-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 12px;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button:hover{
+    background: #000000;
+    transition: all 0.3s ease;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1rem;
+    padding: 15px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ 
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(imgs/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: var(--secondary-color);
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(imgs/check.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+}
+
+ul li span:hover{
+    color: #800000;
+    background-color: #edeef0;
+}
+
+
